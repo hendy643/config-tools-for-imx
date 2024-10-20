@@ -1,7 +1,7 @@
 # Maintainer: hendy643 <hendy643@hotmail.com>
 
 pkgname=config-tools-for-imx
-pkgver=15.1
+pkgver=16.1
 pkgrel=1
 epoch=
 pkgdesc="Integrated suite of configuration tools for NXP's i.MX Application Processors. From BIN package distributed by NXP."
@@ -10,11 +10,11 @@ url="https://www.nxp.com/design/development-boards/i-mx-evaluation-and-developme
 license=('custom:"NXP"')
 depends=('java-environment' 'libxslt' 'libxtst' 'gcc-libs-multilib' 'gtk2' 'alsa-lib' 'libnet')
 source=("file://config-tools-for-imx-v${pkgver}-${pkgrel}_amd64.deb.bin" "LICENSE" "${pkgname}.install")
-sha256sums=('86a35480ecf29cace480c554760f02f74b419bd6fdbf05636db2a4797af61063'
+sha256sums=('5f97c8a7268149f92b2a6d5deb07d0ae5a52810995db950f1e55093c18f16e8d'
             '41beb81990892ba157f85cd6c008f65191a763c97331ac6c8cceb18700883af5'
             'a1f53f36f04d98667717092eedc6ccb6c5a5a3ea7ad6ded79a9ac6f004f6307c')
 
-options=('!strip')
+options=('!strip' '!debug')
 
 prepare() {
     chmod +x config-tools-for-imx-v${pkgver}-${pkgrel}_amd64.deb.bin
